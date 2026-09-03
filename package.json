@@ -1,25 +1,26 @@
 {
   "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.25.0+sha512.5cde925b4f075f725eb71fbae18a42ffe784524789f19b61c731cb8721ec28aaee160e01a8d5af4fedb2a42cdbf300efe23db356b0d4a17b4d63e11f8ab7c956",
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "postinstall": "astro sync",
+    "format": "dprint fmt",
+    "format:check": "dprint check"
+  },
+  "dependencies": {
+    "@astrojs/node": "^11.1.5",
+    "@astrojs/svelte": "^9.0.1",
+    "@lucide/astro": "^1.0.0",
+    "@lucide/svelte": "^1.0.0",
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^7.3.1",
+    "svelte": "^5.57.0",
+    "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
-    "@nuxt/content": "^2.4.3",
-    "@nuxtjs/robots": "^3.0.0",
-    "@nuxtjs/tailwindcss": "^6.4.0",
-    "@vueuse/core": "^9.12.0",
-    "@vueuse/nuxt": "^9.12.0",
-    "daisyui": "^2.50.0",
-    "nuxt": "^3.2.0",
-    "nuxt-icon": "^0.2.11"
-  },
-  "prettier": {
-    "arrowParens": "avoid",
-    "semi": false,
-    "singleQuote": true
+    "typescript": "^7.0.0"
   }
 }

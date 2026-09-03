@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+/* Ported from the old daisyui theme ("mytheme") in tailwind.config.js. Plain
+   Tailwind v4 color tokens work with every color utility (bg-*, text-*,
+   fill-*, border-*, ...) automatically, so daisyui itself is no longer
+   needed just to expose this palette. */
+@theme {
+  --color-primary: #db924b;
+  --color-secondary: #263e3f;
+  --color-accent: #10576d;
+  --color-neutral: #120c12;
+  --color-base-100: #20161f;
+  --color-info: #8dcac1;
+  --color-success: #9db787;
+  --color-warning: #ffd25f;
+  --color-error: #fc9581;
+
+  /* was theme.extend.gap.clamp in tailwind.config.js -> gap-clamp */
+  --spacing-clamp: clamp(10px, 4vw, 100px);
+  /* was theme.extend.transitionDuration[400] -> duration-400 */
+  --transition-duration-400: 400ms;
+}
+
+/* Logo hover -> highlight the gradient-fill accents elsewhere in the SVG.
+   Pure CSS (:has), replacing the old body[data-gradient-active] + JS watcher. */
+body:has(.logo:hover) .gradient-fill {
+  @apply fill-teal-600;
+}
+
+/* Custom cursor trailer: only visible while the pointer is over the page. */
+#trailer {
+  @apply opacity-0;
+}
+
+body:hover #trailer {
+  @apply opacity-100;
+}

@@ -1,8 +1,7 @@
-node_modules
-*.log*
-.nuxt
-.nitro
+.astro
 .cache
-.output
 .env
+.review-loop
+*.log*
 dist
+node_modules

@@ -1,0 +1,17 @@
+{
+  "typescript": {
+    "quoteStyle": "preferSingle",
+    "semiColons": "asi",
+    "arrowFunction.useParentheses": "preferNone"
+  },
+  "excludes": ["node_modules", "dist", ".astro", ".opencode", "lib", "pnpm-lock.yaml"],
+  "plugins": [
+    "npm:@dprint/typescript@0.96.1",
+    "npm:@dprint/json@0.23.0",
+    "npm:@dprint/markdown@0.23.2",
+    "npm:@dprint/toml@0.8.0",
+    "npm:dprint-plugin-malva@0.16.0",
+    "npm:dprint-plugin-markup@0.27.3",
+    "npm:dprint-plugin-yaml@0.6.0"
+  ]
+}

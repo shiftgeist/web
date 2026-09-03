@@ -1,0 +1,4 @@
+[tools]
+dprint = "latest"
+node = "26"
+"npm:corepack" = "latest"
