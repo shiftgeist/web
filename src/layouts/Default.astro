@@ -1,15 +1,14 @@
 ---
-import '../styles/global.css'
-import MouseTrailer from '../components/MouseTrailer.svelte'
-import SiteFooter from '../components/SiteFooter.astro'
-import SiteHeader from '../components/SiteHeader.astro'
-import SiteMenu from '../components/SiteMenu.svelte'
+import MouseTrailer from "../components/MouseTrailer.svelte";
+import SiteFooter from "../components/SiteFooter.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import "../styles/global.css";
 
 interface Props {
-  title?: string
+  title?: string;
 }
 
-const { title = 'Felix Hungenberg' } = Astro.props
+const { title = "Felix Hungenberg" } = Astro.props;
 ---
 
 <html lang="en">
@@ -19,11 +18,11 @@ const { title = 'Felix Hungenberg' } = Astro.props
     <link rel="icon" href="/favicon.ico" />
     <title>{title}</title>
   </head>
-  <body class="min-h-screen bg-zinc-900">
+  <body class="min-h-screen bg-black">
     <MouseTrailer client:load />
     <SiteHeader />
     <slot />
-    <SiteMenu client:load />
+    <!-- <SiteMenu client:load /> -->
     <SiteFooter />
   </body>
 </html>
